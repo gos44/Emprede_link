@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Listar Todo</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -72,25 +71,28 @@
     <table>
         <tr>
             <th>ID</th>
-            <th>Nombre emprededor</th>
-            <th>Apellido emprededor</th>
-            <th>Nombre inversor</th>
-            <th>Apellido inversor</th>
-            <th>Descripcion</th>
+            <th>Nombre del Emprendedor</th>
+            <th>Apellido del Emprendedor</th>
+            <th>Nombre del Emprendimiento</th>
+            <th>Descripción General</th>
+            <th>Nombre del Inversor</th>
+            <th>Apellido del Inversor</th>
+            <th>Chat</th>
+            <th>Fecha</th>
             <th>Acción</th>
             <th>Eliminar</th>
         </tr>
-        @foreach ($lista as $item)
+        @foreach ($listodos as $listodo)
         <tr>
-            <td>{{ $item->id }}</td>
-            <td>{{ $item->name_entrepreneur }}</td>
-            <td>{{ $item->entrepreneur_surname }}</td>
-            <td>{{ $item->name_entrepreneurship }}</td>
-            <td>{{ $item->surname_investor }}</td>
-            <td>{{ $item->general_description }}</td>
-            <td><a href="{{ route('show_consultarlista', $item->id) }}"><button type="button">Mostrar</button></a></td>
+            <td>{{ $listodo->id }}</td>
+            <td>{{ $listodo->name_entrepreneur }}</td>
+            <td>{{ $listodo->entrepreneur_surname }}</td>
+            <td>{{ $listodo->name_entrepreneurship }}</td>
+            <td>{{ $listodo->surname_investor }}</td>
+            <td>{{ $listodo->general_description }}</td>
+            <td><a href="{{ route('show_consultar_todo.showtodo', $listodo->id) }}"><button type="button">Mostrar</button></a></td>
             <td>
-                <form action="{{ route('destroy', $item->id) }}" method="POST">
+                <form action="{{ route('destroy_consultartodo', $listodo->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit">Eliminar</button>
