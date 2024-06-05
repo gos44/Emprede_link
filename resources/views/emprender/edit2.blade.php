@@ -16,6 +16,23 @@
         <br>
         <input type="text" name="nombre_emprendimiento" value="{{old('nombre_emprendimiento',$emprendimiento->nombre_emprendimiento) }}">
     </label>
+    <label>
+        descripcion:
+        <br>
+        <input type="text" name="descripcion" value="{{old('descripcion',$emprendimiento->descripcion) }}">
+    </label>
+    <label>
+        especificaciones:
+        <br>
+        <input type="text" name="especificaciones" value="{{old('especificaciones',$emprendimiento->especificaciones) }}">
+    </label>
+    <label>
+        categoria:
+        <br>
+        <input type="text" name="categoria" value="{{old('categoria',$emprendimiento->categoria) }}">
+    </label>
+
+    
     <br>
     <label>
        

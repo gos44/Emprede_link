@@ -14,6 +14,17 @@ return new class extends Migration
         Schema::create('emprendimientos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_emprendimiento');
+            $table->string('descripcion');
+            $table->string('especificaciones');
+            $table->string('categoria');
+          
+            $table->unsignedBigInteger('emprendedor_id')->nullable();
+            $table->foreign('emprendedor_id')
+            ->references('id')
+            ->on('emprendedors')->onDelete('cascade');
+
+            
+
             $table->timestamps();
         });
     }

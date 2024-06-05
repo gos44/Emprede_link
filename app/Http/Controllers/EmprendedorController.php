@@ -24,6 +24,11 @@ class EmprendedorController extends Controller
         $emprendedor->correo = $request->correo;
         $emprendedor->ubicacion = $request->ubicacion;
         $emprendedor->numero = $request->numero;
+
+        $emprendedor = User::all();
+       
+       
+        return view('role_user.asociar',compact('users','roles'));
         $emprendedor->save();
 
         return redirect()->route('emprendedor.index');

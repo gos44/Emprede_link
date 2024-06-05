@@ -23,6 +23,11 @@
         <tr>
           <td>{{ $emprendimiento->id }}</td>
           <td>{{ $emprendimiento->nombre_emprendimiento }}</td>
+          <td>{{ $emprendimiento->descripcion }}</td>
+          <td>{{ $emprendimiento->especificaciones }}</td>
+          <td>{{ $emprendimiento->categoria }}</td>
+          <td>{{ $emprendimiento->emprendedor_id }}</td>
+         
           <td>
             <a href="{{ route('emprendimiento.show', $emprendimiento->id) }}">Mostrar</a>
             <a href="{{ route('emprendimiento.edit', $emprendimiento->id) }}">Editar</a>

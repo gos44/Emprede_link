@@ -22,8 +22,29 @@
         <input type="text" name="nombre_emprendimiento">
     </label>
     <br>
-    
+    <label>
+        descripcion:
+        <br>
+        <input type="text" name="descripcion">
+    </label>
     <br>
+    <label>
+        especificaiones:
+        <br>
+        <input type="text" name="especificaciones">
+    </label>
+    <br>
+    <label>
+        categoria:
+        <br>
+        <input type="text" name="categoria">
+    </label>
+    <br>
+  <br>
+ 
+  
+    <br>
+    
     <button type="submit">Publicar</button>
 </form>
 </body>

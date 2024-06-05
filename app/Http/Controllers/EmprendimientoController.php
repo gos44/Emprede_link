@@ -16,6 +16,9 @@ class EmprendimientoController extends Controller
     {
         $emprendimiento = new Emprendimiento();
         $emprendimiento->nombre_emprendimiento = $request->nombre_emprendimiento;
+        $emprendimiento->descripcion = $request->descripcion;
+        $emprendimiento->especificaciones = $request->especificaciones;
+        $emprendimiento->categoria = $request->categoria;
         $emprendimiento->save();
         return redirect()->route('emprendimientos.index');
     }
@@ -24,6 +27,8 @@ class EmprendimientoController extends Controller
     {
         $emprendimientos = Emprendimiento::all();
         return view('emprender.listar2', ['emprendimientos' => $emprendimientos]);
+
+        
     }
 
     public function show(Emprendimiento $emprendimiento)
@@ -45,6 +50,9 @@ class EmprendimientoController extends Controller
     public function update(Request $request, Emprendimiento $emprendimiento)
     {
         $emprendimiento->nombre_emprendimiento = $request->nombre_emprendimiento;
+        $emprendimiento->descripcion = $request->descripcion;
+        $emprendimiento->especificaciones = $request->especificaciones;
+        $emprendimiento->categoria = $request->categoria;
         $emprendimiento->save();
         return redirect()->route('emprendimientos.index');
     }
