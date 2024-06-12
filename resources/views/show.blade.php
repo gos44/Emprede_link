@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Datos:</h1>
-    {{$lista}}
+    <h1>DATOS</h1>
+    /*{{$inversionista}}
 </body>
 </html>
