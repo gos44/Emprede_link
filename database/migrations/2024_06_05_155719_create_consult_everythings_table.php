@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
-        Schema::create("consultar_listas", function (Blueprint $table) {
+        Schema::create('consult_everythings', function (Blueprint $table) {
             $table->id();
             $table->string('name_entrepreneur');
-            $table->string('entrepreneur_surname');
             $table->string('name_entrepreneurship');
-            $table->string('surname_investor');
+            $table->string('entrepreneur_surname');
             $table->text('general_description');
+            $table->string('name_investor');
+            $table->string('surname_investor');
+            $table->text('chat');
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -28,7 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
-            Schema::dropIfExists('consultar_lista');
+        Schema::dropIfExists('consult_everythings');
     }
 };
