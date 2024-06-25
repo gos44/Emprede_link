@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>DATOS</h1>
-    /*{{$inversionista}}
+    <h1>hola desde show publicar:</h1>
+    {{$trabajo}}
 </body>
 </html>
