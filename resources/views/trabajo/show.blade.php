@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Datos:</h1>
-    {{$lista}}
+    <h1>hola desde show publicar:</h1>
+    {{$trabajo}}
 </body>
 </html>

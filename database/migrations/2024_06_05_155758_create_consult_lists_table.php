@@ -11,17 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
-        Schema::create("consultar_todo", function (Blueprint $table) {
+        Schema::create('consult_lists', function (Blueprint $table) {
             $table->id();
             $table->string('name_entrepreneur');
-            $table->string('name_entrepreneurship');
             $table->string('entrepreneur_surname');
-            $table->text('general_description');
-            $table->string('name_investor');
+            $table->string('name_entrepreneurship');
             $table->string('surname_investor');
-            $table->boolean('chat');
-            $table->date('date');
+            $table->text('general_description');
             $table->timestamps();
         });
     }
@@ -31,7 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
-        Schema::dropIfExists("consultar_todo");
+        Schema::dropIfExists('consult_lists');
     }
 };
