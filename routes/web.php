@@ -2,15 +2,18 @@
 
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\controllerconsultar_lista;
-use App\Http\Controllers\controllerconsultar_todo;
+use Illuminate\Support\Facades\Route;   
+use App\Models\Inversionista;
+use App\Http\Controllers\InversionistaController;
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::get('inversionistas/create', [InversionistaController::class, 'create'])->name('inversionistas.create');
+Route::post('inversionistas/store', [InversionistaController::class, 'store'])->name('inversionistas.store');
+Route::get('inversionistas/listar', [InversionistaController::class, 'index'])->name('inversionistas.index');
+Route::delete('inversionistas/{inversionista}', [InversionistaController::class, 'destroy'])->name('inversionistas.destroy');
+Route::get('inversionistas/{inversionista}', [InversionistaController::class, 'show'])->name('inversionistas.show');
+Route::put('inversionistas/{inversionista}',[InversionistaController::class,'update'])->name('inversionistas.update');
+Route::get('inversionistas/{inversionista}/editar',[InversionistaController::class,'edit'])->name('inversionistas.edit');
 
-
-Route::get('/frlista',[controllerconsultar_lista::class,'formulario_lista']);
-Route::post('/data_list',[controllerconsultar_lista::class,'data_list'])->name('data_lista');
-Route::get('/listarconsulta', [controllerconsultar_lista::class,'listar_lista'])->name('listar_lista'); 
-Route::delete('/{consultar_lista}', [controllerconsultar_lista::class,'destroy'])->name('destroy'); 
-Route::post('/consultalist',[controllerconsultar_lista::class,'data_list'])->name('consultar_lista');
-Route::get('/{lista}',[controllerconsultar_lista::class,'show'])->name('show_consultarlista');
