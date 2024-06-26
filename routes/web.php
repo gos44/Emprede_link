@@ -6,12 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmprendedorController;
 use App\Http\Controllers\EmprendimientoController;
 use App\Http\Controllers\ResenaController; 
-use App\Models\Inversionista;
 use App\Http\Controllers\InversionistaController;
 use App\Http\Controllers\PublicarEmprendimientoController;
-
-
-
+use App\Http\Controllers\ConexionController;
 
 
 
@@ -64,4 +61,6 @@ Route::get('inversionistas/{inversionista}', [InversionistaController::class, 's
 Route::put('inversionistas/{inversionista}',[InversionistaController::class,'update'])->name('inversionistas.update');
 Route::get('inversionistas/{inversionista}/editar',[InversionistaController::class,'edit'])->name('inversionistas.edit');
 
-
+//conexion (asociar)
+Route::get('/interes/asociar', [ConexionController::class, 'asociar'])->name('interes.asociar');
+Route::post('/interes/store', [ConexionController::class, 'store'])->name('interes.store');
