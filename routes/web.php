@@ -23,6 +23,7 @@ Route::get('emprendedor/{emprendedor}', [EmprendedorController::class, 'show'])-
 Route::put('emprendedor/{emprendedor}', [EmprendedorController::class, 'update'])->name('emprendedor.update');
 Route::get('emprendedor/{emprendedor}/editar', [EmprendedorController::class, 'edit'])->name('emprendedor.edit');
 
+Route::get('emprendedor/navigation', [EmprendedorController::class, 'navigation'])->name('emprendedor.navigation');
 
 //emprendimiento
 Route::get('emprendimiento/create', [EmprendimientoController::class, 'creates']);

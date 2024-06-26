@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\Emprendimiento;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class EmprendimientoController extends Controller
 {

@@ -22,6 +22,12 @@ return new class extends Migration
             $table->string('location');
             $table->string('url');
             $table->date('date_exp');
+             
+            $table->unsignedBigInteger('emprendedors_id')->nullable();
+            $table->foreign('emprendedors_id')
+            ->references('id')
+            ->on('emprendedors')->onDelete('cascade');
+          
 
             $table->timestamps();
         });

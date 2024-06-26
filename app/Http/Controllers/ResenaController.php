@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Resena;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class ResenaController extends Controller
 {

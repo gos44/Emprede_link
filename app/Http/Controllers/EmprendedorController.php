@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\Emprendedor; 
+use App\models\user;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class EmprendedorController extends Controller
 {
+
     public function creates()
     {
         return view('emprender.emprendedor');
@@ -70,4 +72,10 @@ class EmprendedorController extends Controller
         $emprendedor->save();
         return redirect()->route('emprendedor.index');
     }
+    public function navigation()
+    {
+        return view('emprender.navigation');
+    }
+
+    
 }
