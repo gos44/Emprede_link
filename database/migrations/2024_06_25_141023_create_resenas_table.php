@@ -16,7 +16,14 @@ return new class extends Migration
             $table->id();
             $table->string('qualification');//calificacion
             $table->string('comment');//comentario
+            $table->unsignedBigInteger('publicar__emprendimientos_id')->nullable();
+            $table->foreign('publicar__emprendimientos_id')
+            ->references('id')
+            ->on('publicar__emprendimientos')->onDelete('cascade');
             $table->timestamps();
+            
+         
+
         });
     }
 

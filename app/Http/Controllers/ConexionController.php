@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\Emprendedor;
 use App\Models\Inversionista;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
-class ConexionController extends Controller 
+class ConexionController extends Controller
 {
     public function asociar()
     {

@@ -13,8 +13,16 @@ return new class extends Migration
     {
         Schema::create('conexion', function (Blueprint $table) {
                 $table->id('id_conexion');
-                $table->foreignId('id_emprendedor')->constrained('emprendedores', 'id_emprendedor');
-                $table->foreignId('id_inversionista')->constrained('inversionistas', 'id_inversionista');
+                $table->unsignedBigInteger('emprendedors_id')->nullable();
+                $table->foreign('emprendedors_id')
+                ->references('id')
+                ->on('emprendedors')->onDelete('cascade');
+    
+                $table->unsignedBigInteger('inversionistas_id')->nullable();
+                $table->foreign('inversionistas_id')
+                ->references('id')
+                ->on('inversionistas')->onDelete('cascade');
+
                 $table->timestamps();
         });
     }

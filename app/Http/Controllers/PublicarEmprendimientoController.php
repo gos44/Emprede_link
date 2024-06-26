@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Publicar_Emprendimiento;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as RoutingController;
 
-class PublicarEmprendimientoController extends Controller
+class PublicarEmprendimientoController extends RoutingController
 {
     public function create()
     {
