@@ -18,17 +18,17 @@
             <th>Acciones</th>
         </tr>
 
-        @foreach ($resena as $resena)
+        @foreach ($review as $review)
         {{-- Crear una fila --}}
         <tr>
-            <td>{{$resena->id}}</td>
-            <td>{{$resena->qualification}}</td>
-            <td>{{$resena->comment}}</td>
+            <td>{{$review->id}}</td>
+            <td>{{$review->qualification}}</td>
+            <td>{{$review->comment}}</td>
            
             <td>
-                <a href="{{ route('resena.show', $resena->id) }}">Mostrar</a>
-                <td><a href="{{route('resena.edit',$resena->id)}}">Editar</a></td>
-                <form action="{{ route('resena.destroy', $resena->id) }}" method="POST">
+                <a href="{{ route('review.show', $review->id) }}">Mostrar</a>
+                <td><a href="{{route('review.edit',$review->id)}}">Editar</a></td>
+                <form action="{{ route('review.destroy', $review->id) }}" method="POST">
                     @csrf
                     @method('delete')
                     <button type="submit">Eliminar</button>

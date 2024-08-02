@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Emprendedor</h1>
+<h1>Enterprising</h1>
 
 @if (session('success'))
     <div>{{ session('success') }}</div>
@@ -23,15 +23,15 @@
     </label>
     <br>
     <label>
-        Lastname:
+        last_name:
         <br>
-        <input type="text" name="lastname">
+        <input type="text" name="last_name">
     </label>
     <br>
     <label>
         Fecha de nacimiento:
         <br>
-        <input type="date" name="fecha_nacimiento">
+        <input type="date" name="birth_date">
     </label>
     <br>
     <label>
@@ -41,33 +41,33 @@
     </label>
     <br>
     <label>
-        Telefono:
+        phone:
         <br>
-        <input type="number" name="telefono">
+        <input type="number" name="phone">
     </label>
     <br>
     <label>
-        Imagen:
+        Image:
         <br>
-        <input type="text" name="imagen">
+        <input type="text" name="image">
     </label>
     <br>
     <label>
-        Correo:
+        email:
         <br>
-        <input type="email" name="correo">
+        <input type="email" name="email">
     </label>
     <br>
     <label>
-        Ubicacion:
+        location:
         <br>
-        <input type="text" name="ubicacion">
+        <input type="text" name="location">
     </label>
     <br>
     <label>
-        Numero:
+        number:
         <br>
-        <input type="number" name="numero">
+        <input type="number" name="number">
     </label>
     <br>
     <button type="submit">Iniciar sesión</button>

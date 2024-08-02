@@ -7,62 +7,62 @@
 </head>
 <body>
 
-    <form action="{{route('emprendedor.update', $emprendedor)}}"  method="POST">
+    <form action="{{route('enterprising.update', $enterprising)}}"  method="POST">
 
         @csrf
         @method('put')
         <label>
         Name:
         <br>
-        <input type="text" name="name" value="{{old('Name',$emprendedor->name) }}">
+        <input type="text" name="name" value="{{old('Name',$enterprising->name) }}">
     </label>
     <br>
     <label>
         Lastname:
         <br>
-        <input type="text" name="lastname" value="{{old('lastname',$emprendedor->lastname) }}">
+        <input type="text" name="lastname" value="{{old('lastname',$enterprising->lastname) }}">
     </label>
     <br>
     <label>
-        Fecha de nacimiento:
+        birth_date:
         <br>
-        <input type="date" name="fecha_nacimiento" value="{{old('fecha_nacimiento',$emprendedor->fecha_nacimiento) }}">
+        <input type="date" name="birth_date" value="{{old('birth_date',$enterprising->birth_date) }}">
     </label>
     <br>
     <label>
         Password:
         <br>
-        <input type="password" name="password" value="{{old('password',$emprendedor->password) }}">
+        <input type="password" name="password" value="{{old('password',$enterprising->password) }}">
     </label>
     <br>
     <label>
-        Telefono:
+        phone:
         <br>
-        <input type="number" name="telefono" value="{{old('telefono',$emprendedor->telefono) }}">
+        <input type="number" name="phone" value="{{old('phone',$enterprising->phone) }}">
     </label>
     <br>
     <label>
-        Imagen:
+        image:
         <br>
-        <input type="text" name="imagen" value="{{old('imagen',$emprendedor->imagen) }}">
+        <input type="text" name="image" value="{{old('image',$enterprising->image) }}">
     </label>
     <br>
     <label>
-        Correo:
+        email:
         <br>
-        <input type="email" name="correo" value="{{old('correo',$emprendedor->correo) }}">
+        <input type="email" name="email" value="{{old('email',$enterprising->email) }}">
     </label>
     <br>
     <label>
-        Ubicacion:
+        location:
         <br>
-        <input type="text" name="ubicacion" value="{{old('ubicacion',$emprendedor->ubicacion) }}">
+        <input type="text" name="location" value="{{old('location',$enterprising->location) }}">
     </label>
     <br>
     <label>
-        Numero:
+        number:
         <br>
-        <input type="number" name="numero" value="{{old('numero',$emprendedor->numero) }}">
+        <input type="number" name="number" value="{{old('number',$enterprising->number) }}">
     </label>
     <br>
        

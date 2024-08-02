@@ -10,7 +10,7 @@
 
   <h1>Lista de Emprendimientos</h1>
 
-  <table id="emprendimientos-table">
+  <table id="enterprises-table">
     <thead>
       <tr>
         <th style="background-color: #3498db; color: white;">ID</th>
@@ -19,19 +19,22 @@
       </tr>
     </thead>
     <tbody>
-      @foreach ($emprendimientos as $emprendimiento)
+      @foreach ($enterprises as $enterprise)
         <tr>
-          <td>{{ $emprendimiento->id }}</td>
-          <td>{{ $emprendimiento->nombre_emprendimiento }}</td>
-          <td>{{ $emprendimiento->descripcion }}</td>
-          <td>{{ $emprendimiento->especificaciones }}</td>
-          <td>{{ $emprendimiento->categoria }}</td>
-          <td>{{ $emprendimiento->emprendedor_id }}</td>
+          <td>{{ $enterprising->id }}</td>
+          <td>{{ $enterprising->name }}</td>
+          <td>{{ $enterprising->last_name }}</td>
+          <td>{{ $enterprising->birth_date }}</td>
+          <td>{{ $enterprising->password }}</td>
+          <td>{{ $enterprising->phone }}</td>
+          <td>{{ $enterprising->gmail }}</td>
+          <td>{{ $enterprising->location }}</td>
+          <td>{{ $enterprising->number }}</td>
          
           <td>
-            <a href="{{ route('emprendimiento.show', $emprendimiento->id) }}">Mostrar</a>
-            <a href="{{ route('emprendimiento.edit', $emprendimiento->id) }}">Editar</a>
-            <form action="{{ route('emprendimiento.destroy', $emprendimiento->id) }}" method="POST" style="display:inline;">
+            <a href="{{ route('enterprise.show', $enterprise->id) }}">Mostrar</a>
+            <a href="{{ route('enterprise.edit', $enterprise->id) }}">Editar</a>
+            <form action="{{ route('enterprise.destroy', $enterprise->id) }}" method="POST" style="display:inline;">
               @csrf
               @method('DELETE')
               <button type="submit" style="background:none; border:none; color:red; cursor:pointer;">Eliminar</button>

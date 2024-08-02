@@ -7,26 +7,26 @@
 </head>
 <body>
 
-    <form action="{{route('resena.update', $resena)}}"  method="POST">
+    <form action="{{route('review.update', $review)}}"  method="POST">
 
         @csrf
         @method('put')
         <label>
             califique con : bueno regular y malo:
         <br>
-        <input name="qualification" type="string" value="{{old('qualification',$resena->qualification) }}">
+        <input name="qualification" type="string" value="{{old('qualification',$review->qualification) }}">
         <br>
         </label>
         <br>
         <label>
             comentario:
         <br>
-        <input name="comment" type="string" value="{{old('comment',$resena->comment)}}">
+        <input name="comment" type="string" value="{{old('comment',$review->comment)}}">
         <br>
         </label>
        <br>
        
-        <button  type="submit">enviar resena</button>
+        <button  type="submit">enviar review</button>
        
     </form>
    

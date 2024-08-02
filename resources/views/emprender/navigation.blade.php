@@ -8,7 +8,7 @@
 <body>
     <h1>Redirecciones a Vistas</h1>
     <ul>
-        <li><a href="{{ url('Conexion/asociar') }}">Asociar</a></li>
+        <li><a href="{{ url('Conection/asociar') }}">Asociar</a></li>
         <li><a href="{{ url('emprender/edit') }}">Editar Emprendedor</a></li>
         <li><a href="{{ url('emprender/edit2') }}">Editar Emprendedor 2</a></li>
         <li><a href="{{ url('emprender/emprendedor') }}">Emprendedor</a></li>

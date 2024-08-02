@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Inversionista extends Model
+class investor extends Model
 {
-    public function emprendedores()
+    public function enterprisings()
     {
-        return $this->belongsToMany(emprendedor::class);
+        return $this->belongsToMany(enterprising::class);
     }
 }

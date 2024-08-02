@@ -10,34 +10,37 @@
 
   <h1>Lista de Emprendedores</h1>
 
-  <table id="emprendedores-table">
+  <table id="enterprisings-table">
     <thead>
       <tr>
         <th style="background-color: #3498db; color: white;">ID</th>
-        <th style="background-color: #3498db; color: white;">Nombre</th>
+        <th style="background-color: #3498db; color: white;">name</th>
         <th style="background-color: #3498db; color: white;">Apellido</th>
         <th style="background-color: #3498db; color: white;">Fecha de Nacimiento</th>
+        <th style="background-color: #3498db; color: white;">Contraseña</th>
         <th style="background-color: #3498db; color: white;">Teléfono</th>
         <th style="background-color: #3498db; color: white;">Correo</th>
         <th style="background-color: #3498db; color: white;">Ubicación</th>
-        <th style="background-color: #3498db; color: white;">Acciones</th>
+        <th style="background-color: #3498db; color: white;">Numero</th>
       </tr>
     </thead>
 
     <tbody>
-      @foreach ($emprendedores as $emprendedor)
+      @foreach ($enterprisings as $enterprising)
         <tr>
-          <td>{{ $emprendedor->id }}</td>
-          <td>{{ $emprendedor->name }}</td>
-          <td>{{ $emprendedor->lastname }}</td>
-          <td>{{ $emprendedor->fecha_nacimiento }}</td>
-          <td>{{ $emprendedor->telefono }}</td>
-          <td>{{ $emprendedor->correo }}</td>
-          <td>{{ $emprendedor->ubicacion }}</td>
+          <td>{{ $enterprising->id }}</td>
+          <td>{{ $enterprising->name }}</td>
+          <td>{{ $enterprising->last_name }}</td>
+          <td>{{ $enterprising->birth_date }}</td>
+          <td>{{ $enterprising->password }}</td>
+          <td>{{ $enterprising->phone }}</td>
+          <td>{{ $enterprising->gmail }}</td>
+          <td>{{ $enterprising->location }}</td>
+          <td>{{ $enterprising->number }}</td>
           <td>
-            <a href="{{ route('emprendedor.show', $emprendedor->id) }}">Mostrar</a>
-            <a href="{{ route('emprendedor.edit', $emprendedor->id) }}">Editar</a>
-            <form action="{{ route('emprendedor.destroy', $emprendedor->id) }}" method="POST" style="display:inline;">
+            <a href="{{ route('enterprising.show', $enterprising->id) }}">Mostrar</a>
+            <a href="{{ route('enterprising.edit', $enterprising->id) }}">Editar</a>
+            <form action="{{ route('enterprising.destroy', $enterprising->id) }}" method="POST" style="display:inline;">
               @csrf
               @method('DELETE')
               <button type="submit" style="background:none; border:none; color:red; cursor:pointer;">Eliminar</button>
@@ -48,12 +51,12 @@
     </tbody>
   </table>
 
-  <div id="emprendedor-details-modal" style="display: none;">
+  <div id="enterprising-details-modal" style="display: none;">
     <div class="modal-content">
       <span class="close-button" onclick="closeModal()">&times;</span>
       <h2>Detalles del Emprendedor</h2>
-      <p id="emprendedor-name"></p>
-      <p id="emprendedor-descripcion"></p>
+      <p id="enterprising-name"></p>
+      <p id="enterprising-description"></p>
     </div>
   </div>
 

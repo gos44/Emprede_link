@@ -11,18 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('emprendedors', function (Blueprint $table) {
+        Schema::create('enterprisings', function (Blueprint $table) {
            
             $table->id();
             $table->string('name');
-            $table->string('lastname');
-            $table->date('fecha_nacimiento');
-            $table->string('password');  
-            $table->integer('telefono');
-            $table->string('imagen');
-            $table->string('correo');
-            $table->string('ubicacion');
-            $table->integer('numero'); 
+            $table->string('last_name');
+            $table->date('birth_date');
+            $table->string('password');
+            $table->integer('phone');
+            $table->string('image');
+            $table->string('email');
+            $table->string('location');
+            $table->integer('number');
+            
        
             $table->timestamps();
         });
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('emprendedors');
+        Schema::dropIfExists('enterprisings');
     }
 };

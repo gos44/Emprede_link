@@ -7,29 +7,29 @@
 </head>
 <body>
 
-    <form action="{{route('emprendimiento.update', $emprendimiento)}}"  method="POST">
+    <form action="{{route('enterprises.update', $enterprises)}}"  method="POST">
 
         @csrf
         @method('put')
         <label>
         Name:
         <br>
-        <input type="text" name="nombre_emprendimiento" value="{{old('nombre_emprendimiento',$emprendimiento->nombre_emprendimiento) }}">
+        <input type="text" name="enterprise_name" value="{{old('enterprise_name',$enterprises->enterprise_name) }}">
     </label>
     <label>
-        descripcion:
+        description:
         <br>
-        <input type="text" name="descripcion" value="{{old('descripcion',$emprendimiento->descripcion) }}">
+        <input type="text" name="description" value="{{old('description',$enterprises->description) }}">
     </label>
     <label>
-        especificaciones:
+        specification:
         <br>
-        <input type="text" name="especificaciones" value="{{old('especificaciones',$emprendimiento->especificaciones) }}">
+        <input type="text" name="specification" value="{{old('specification',$enterprises->specification) }}">
     </label>
     <label>
-        categoria:
+        categorie:
         <br>
-        <input type="text" name="categoria" value="{{old('categoria',$emprendimiento->categoria) }}">
+        <input type="text" name="categorie" value="{{old('categorie',$enterprises->categorie) }}">
     </label>
 
     

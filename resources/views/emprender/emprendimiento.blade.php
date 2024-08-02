@@ -7,37 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Nombre del emprendimiento</h1>
+<h1>Nombre del enterprises</h1>
 
 @if (session('success'))
     <div>{{ session('success') }}</div>
 @endif
 
-<form action="{{ route('emprendimiento.store') }}" method="post" enctype="multipart/form-data">
+<form action="{{ route('enterprises.store') }}" method="post" enctype="multipart/form-data">
     @csrf
 
     <label>
-        Nombre del emprendimiento:
+        enterprise_name:
         <br>
-        <input type="text" name="nombre_emprendimiento">
+        <input type="text" name="enterprise_name">
     </label>
     <br>
     <label>
-        descripcion:
+        description:
         <br>
-        <input type="text" name="descripcion">
+        <input type="text" name="description">
     </label>
     <br>
     <label>
-        especificaiones:
+        specification:
         <br>
-        <input type="text" name="especificaciones">
+        <input type="text" name="specification">
     </label>
     <br>
     <label>
-        categoria:
+        categorie:
         <br>
-        <input type="text" name="categoria">
+        <input type="text" name="categorie">
     </label>
     <br>
   <br>

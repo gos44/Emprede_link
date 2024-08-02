@@ -5,7 +5,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmprendedorController;
 use App\Http\Controllers\EmprendimientoController;
-use App\Http\Controllers\ResenaController; 
+use App\Http\Controllers\ReviewController; 
 use App\Http\Controllers\InversionistaController;
 use App\Http\Controllers\PublicarEmprendimientoController;
 use App\Http\Controllers\ConexionController;
@@ -15,8 +15,13 @@ use App\Http\Controllers\ConexionController;
 //Emprendedor
 
 
-Route::get('emprendedor/create', [EmprendedorController::class, 'creates']);
-Route::post('emprender/store', [EmprendedorController::class, 'store'])->name('emprender.store');
+Route::get('emprendedor/create', [EnterprisingController::class, 'creates']);
+Route::post('emprender/store', [EnterprisingController::class, 'store'])->name('emprender.store');
+
+
+
+
+
 Route::get('emprendedor/listar', [EmprendedorController::class, 'index'])->name('emprendedor.index');
 Route::delete('emprendedor/{emprendedor}', [EmprendedorController::class, 'destroy'])->name('emprendedor.destroy');
 Route::get('emprendedor/{emprendedor}', [EmprendedorController::class, 'show'])->name('emprendedor.show');
@@ -45,13 +50,13 @@ Route::delete('trabajo/{trabajo}',[PublicarEmprendimientoController::class,'dest
 Route::get('trabajo/{trabajo}/editar',[PublicarEmprendimientoController::class,'edit'])->name('trabajo.edit');
 
 //
-Route::get('resena/create',[ResenaController::class,'create']);
-Route::post('resenas/store', [ResenaController::class,'store'])->name('resenas.store');
-Route::get('resena/listar',[ResenaController::class,'index'])->name('resena.index');
-Route::get('resena/{resena}',[ResenaController::class,'show'])->name('resena.show');
-Route::put('resena/{resena}',[ResenaController::class,'update'])->name('resena.update');//nuevo
-Route::delete('resena/{resena}',[ResenaController::class,'destroy'])->name('resena.destroy');
-Route::get('resena/{resena}/editar',[ResenaController::class,'edit'])->name('resena.edit');
+Route::get('review/create',[ReviewController::class,'create']);
+Route::post('reviews/store', [ReviewController::class,'store'])->name('reviews.store');
+Route::get('review/listar',[ReviewController::class,'index'])->name('review.index');
+Route::get('review/{review}',[ReviewController::class,'show'])->name('review.show');
+Route::put('review/{review}',[ReviewController::class,'update'])->name('review.update');//nuevo
+Route::delete('review/{review}',[ReviewController::class,'destroy'])->name('review.destroy');
+Route::get('review/{review}/editar',[ReviewController::class,'edit'])->name('review.edit');
 
 
 Route::get('inversionistas/create', [InversionistaController::class, 'create'])->name('inversionistas.create');

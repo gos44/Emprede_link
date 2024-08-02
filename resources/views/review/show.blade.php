@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>DATOS</h1>
-    /*{{$inversionista}}
+    /*{{$review}}
 </body>
 </html>

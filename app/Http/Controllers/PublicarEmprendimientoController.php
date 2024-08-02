@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Publicar_Emprendimiento;
+use App\Models\Publish_venture;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as RoutingController;
 
-class PublicarEmprendimientoController extends RoutingController
+class PublishventureController extends RoutingController
 {
     public function create()
     {
@@ -16,7 +16,7 @@ class PublicarEmprendimientoController extends RoutingController
 
     public function store(Request $request)
     {
-        $trabajo = new Publicar_Emprendimiento();
+        $trabajo = new Publish_venture();
         $trabajo->name = $request->input('name');
         $trabajo->last_name = $request->input('last_name');
         $trabajo->phone_number = $request->input('phone_number');
@@ -32,26 +32,26 @@ class PublicarEmprendimientoController extends RoutingController
 
     public function index()
     {
-        $trabajos = Publicar_Emprendimiento::orderBy('id', 'desc')->get();
+        $trabajos = Publish_venture::orderBy('id', 'desc')->get();
         return view('trabajo.listar', compact('trabajos'));
     }
 
-    public function show(Publicar_Emprendimiento $trabajo) {
+    public function show(Publish_venture $trabajo) {
         return view('trabajo.show', compact('trabajo'));
     }
 
-    public function destroy(Publicar_Emprendimiento $trabajo) {
+    public function destroy(Publish_venture $trabajo) {
         $trabajo->delete();
         return redirect()->route('trabajo.index');
     }
 
-    public function edit (Publicar_Emprendimiento $trabajo){
+    public function edit (Publish_venture $trabajo){
     
         return view ('trabajo.edit',compact('trabajo'));
 
     }
 
-    public function update(Request $request,Publicar_Emprendimiento $trabajo ){
+    public function update(Request $request,Publish_venture $trabajo ){
 
        
         $trabajo->name = $request->input('name');

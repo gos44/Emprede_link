@@ -12,14 +12,24 @@ return new class extends Migration
     public function up(): void
     {
 
-        Schema::create('resenas', function (Blueprint $table)  {
+        Schema::create('reviews', function (Blueprint $table)  {
+            
             $table->id();
             $table->string('qualification');//calificacion
             $table->string('comment');//comentario
-            $table->unsignedBigInteger('publicar__emprendimientos_id')->nullable();
-            $table->foreign('publicar__emprendimientos_id')
+
+            $table->unsignedBigInteger('investor_id')->nullable();
+            $table->unsignedBigInteger('enterprising_id')->nullable();
+
+            $table->foreign('investor_id')
             ->references('id')
-            ->on('publicar__emprendimientos')->onDelete('cascade');
+            ->on('investors')->onDelete('cascade');
+
+            $table->foreign('enterprising_id')
+            ->references('id')
+            ->on('enterprisings')->onDelete('cascade');
+
+
             $table->timestamps();
             
          
@@ -32,6 +42,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('resenas');
+        Schema::dropIfExists('reviews');
     }
 };
