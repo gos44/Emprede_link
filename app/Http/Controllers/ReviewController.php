@@ -15,7 +15,7 @@ class ReviewController extends Controller
 
     public function store(Request $request)
     {
-        $review = new review();
+        $review = new Review();
         $review->qualification = $request->input('qualification');
         $review->comment = $request->input('comment');
        
@@ -25,25 +25,25 @@ class ReviewController extends Controller
 
     public function index()
     {
-        $review = review::orderBy('id', 'desc')->get();
+        $review = Review::orderBy('id', 'desc')->get();
         return view('review.listar', compact('review'));
     }
-    public function show(review $review) {
+    public function show(Review $review) {
         return view('review.show', compact('review'));
     }
 
-    public function destroy(review $review) {
+    public function destroy(Review $review) {
         $review->delete();
         return redirect()->route('review.index');
     }
 
-    public function edit (review $review){
+    public function edit (Review $review){
     
         return view ('review.edit',compact('review'));
 
     }
 
-    public function update(Request $request,review $review ){
+    public function update(Request $request,Review $review ){
 
        
         $review->qualification = $request->input('qualification');

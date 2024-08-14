@@ -15,7 +15,7 @@ use App\Http\Controllers\ConexionController;
 //Emprendedor
 
 
-Route::get('emprendedor/create', [EnterprisingController::class, 'creates']);
+`Route::get('emprendedor/create', [EnterprisingController::class, 'creates']);
 Route::post('emprender/store', [EnterprisingController::class, 'store'])->name('emprender.store');
 
 
@@ -47,7 +47,7 @@ Route::get('trabajo/listar',[PublicarEmprendimientoController::class,'index'])->
 Route::get('trabajo/{trabajo}',[PublicarEmprendimientoController::class,'show'])->name('trabajo.show');
 Route::put('trabajo/{trabajo}',[PublicarEmprendimientoController::class,'update'])->name('trabajo.update');//nuevo
 Route::delete('trabajo/{trabajo}',[PublicarEmprendimientoController::class,'destroy'])->name('trabajo.destroy');
-Route::get('trabajo/{trabajo}/editar',[PublicarEmprendimientoController::class,'edit'])->name('trabajo.edit');
+Route::get('trabajo/{trabajo}/editar',[PublicarEmprendimientoController::class,'edit'])->name('trabajo.edit');`
 
 //
 Route::get('review/create',[ReviewController::class,'create']);
@@ -56,10 +56,10 @@ Route::get('review/listar',[ReviewController::class,'index'])->name('review.inde
 Route::get('review/{review}',[ReviewController::class,'show'])->name('review.show');
 Route::put('review/{review}',[ReviewController::class,'update'])->name('review.update');//nuevo
 Route::delete('review/{review}',[ReviewController::class,'destroy'])->name('review.destroy');
-Route::get('review/{review}/editar',[ReviewController::class,'edit'])->name('review.edit');
+Route::get('review/{review}/edit',[ReviewController::class,'edit'])->name('review.edit');
 
 
-Route::get('inversionistas/create', [InversionistaController::class, 'create'])->name('inversionistas.create');
+`Route::get('inversionistas/create', [InversionistaController::class, 'create'])->name('inversionistas.create');
 Route::post('inversionistas/store', [InversionistaController::class, 'store'])->name('inversionistas.store');
 Route::get('inversionistas/listar', [InversionistaController::class, 'index'])->name('inversionistas.index');
 Route::delete('inversionistas/{inversionista}', [InversionistaController::class, 'destroy'])->name('inversionistas.destroy');
@@ -69,4 +69,4 @@ Route::get('inversionistas/{inversionista}/editar',[InversionistaController::cla
 
 //conexion (asociar)
 Route::get('/interes/asociar', [ConexionController::class, 'asociar'])->name('interes.asociar');
-Route::post('/interes/store', [ConexionController::class, 'store'])->name('interes.store');
+Route::post('/interes/store', [ConexionController::class, 'store'])->name('interes.store');`

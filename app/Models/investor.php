@@ -7,8 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class investor extends Model
 {
-    public function enterprisings()
-    {
-        return $this->belongsToMany(enterprising::class);
+    public function user_investors (){
+        return $this->hasMany(User_investor::class);
     }
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
+
+    public function enterprisings (){
+        return $this->hasMany(Enterprising::class);
+    }
+
+    public function user_enterprisings (){
+        return $this->hasMany(User_enterprising::class);
+    }
+
+    public function create_reviews(){
+        return $this->hasMany(Create_review::class);
+    }
+
 }

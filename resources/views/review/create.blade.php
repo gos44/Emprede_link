@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-   <h1> resena </h1> 
+   <h1> reviews </h1> 
    
-   <form action="{{route('reviews.store')}}"  method="POST" enctype="multipart/form-data" >
+   <form action="{{route('review.store')}}"  method="POST" enctype="multipart/form-data" >
            
     @csrf
     <label>
@@ -18,14 +18,14 @@
         <input type="string" name="qualification">
     </label>
     <br><br>
-    <label>
+     <label>
         comentario:
         <br>
         <input type="string" name="comment">
     </label>
     <br><br>
     
-
+    
     <button type="submit">enviar resena :</button>
    
 

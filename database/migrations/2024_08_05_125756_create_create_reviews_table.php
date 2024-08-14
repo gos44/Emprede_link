@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('investor_id')->nullable();
-            $table->unsignedBigInteger('enterprise_id')->nullable();
+            $table->unsignedBigInteger('enterprice_id')->nullable();
 
             $table->foreign('investor_id')
             ->references('id')
             ->on('investors')->onDelete('cascade');
 
-            $table->foreign('enterprise_id')
+            $table->foreign('enterprice_id')
             ->references('id')
-            ->on('enterprises')->onDelete('cascade');
+            ->on('enterprices')->onDelete('cascade');
             
 
             $table->timestamps();

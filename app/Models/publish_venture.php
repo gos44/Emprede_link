@@ -8,8 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class publish_venture extends Model
 {
     use HasFactory;
-    public function investors (){
-        return $this->hasMany(enterprising::class);
+
+    public function enterprising (){
+        return $this->belongsTo(Enterprising::class);
     }
+
+    public function enterprices (){
+        return $this->hasMany(Enterprice::class);
+    }
+
+
+
+
+
+
     }
 
