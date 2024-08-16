@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class enterprising extends Model
 
 {
+
     public function enterprices(){
         return $this->hasMany(Enterprice::class);
     }
@@ -26,5 +27,9 @@ class enterprising extends Model
 
     public function User_investors(){
         return $this->hasMany(User_investor::class);
+    }
+
+    public function investors(){
+        return $this->belongsToMany(Investor::class);
     }
 }

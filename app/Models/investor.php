@@ -15,16 +15,16 @@ class investor extends Model
         return $this->hasMany(Review::class);
     }
 
-    public function enterprisings (){
-        return $this->hasMany(Enterprising::class);
-    }
-
     public function user_enterprisings (){
         return $this->hasMany(User_enterprising::class);
     }
 
     public function create_reviews(){
         return $this->hasMany(Create_review::class);
+    }
+
+    public function enterprisings(){
+        return $this->belongsToMany(User_investor::class);
     }
 
 }

@@ -24,8 +24,6 @@ class enterprice extends Model
 
     public function create_reviews(){
         return $this->hasMany(Create_review::class);
-    }
-
-    
+    }    
 
 }
