@@ -13,7 +13,7 @@
     <div>{{ session('success') }}</div>
 @endif
 
-<form action="{{ route('enterprises.store') }}" method="post" enctype="multipart/form-data">
+<form action="{{ route('emprender.store') }}" method="post" enctype="multipart/form-data">
     @csrf
 
     <label>

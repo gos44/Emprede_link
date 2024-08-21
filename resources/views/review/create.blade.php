@@ -9,7 +9,7 @@
 <body>
    <h1> reviews </h1> 
    
-   <form action="{{route('review.store')}}"  method="POST" enctype="multipart/form-data" >
+   <form action="{{route('reviews.store')}}"  method="POST" enctype="multipart/form-data" >
            
     @csrf
     <label>

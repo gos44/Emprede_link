@@ -11,18 +11,17 @@
     <form action="{{ route('interest.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         
-        <br>
-        <h1>Emprendedores:</h1>
+        <h2>Emprendedores:</h2>
         <select name="enterprising_id">
             @foreach($enterprisings as $enterprising)
                 <option value="{{ $enterprising->id_enterprising }}">{{ $enterprising->id_enterprising }} - {{ $enterprising->Nombre_de_empresa }}</option>
             @endforeach
         </select>
-        <br>
-        <h1>Inversionistas:</h1>
+        
+        <h2>Inversionistas:</h2>
         <select name="investors_id">
-            @foreach($investors as $investors)
-                <option value="{{ $investors->id_investor }}">{{ $investors->id_investor }} - {{ $investors->name }} {{ $investors->Apellido }}</option>
+            @foreach($investors as $investor)
+                <option value="{{ $investor->id_investor }}">{{ $investor->id_investor }} - {{ $investor->name }} {{ $investor->Apellido }}</option>
             @endforeach
         </select>
         

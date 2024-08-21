@@ -6,7 +6,7 @@ use App\Models\Investor;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class InversionistaController extends Controller
+class InvestoreController extends Controller
 {
     public function index()
     {
@@ -16,7 +16,7 @@ class InversionistaController extends Controller
 
     public function create()
     {
-        return view('investoreC');
+        return view('inversionistaC');
     }
 
     public function store(Request $request)

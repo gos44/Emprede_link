@@ -5,7 +5,7 @@ use App\Models\Enterprice;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class EnterpriseController extends Controller
+class EnterpriceController extends Controller
 {
     public function creates()
     {
